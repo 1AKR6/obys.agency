@@ -1,0 +1,109 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #fff;
+   font-family: "Plain Light";
+}
+
+html, body{
+   height: 100%;
+   width: 100%;
+}
+/* This is our loader div */
+/* It covers our main div */
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #030303;
+    padding: 20vh 10vw;
+}
+.line{
+    /* background-color: red; */
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+.line h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+/* For the numeric counter in the loader page */
+#line1-part{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#line1-part h5, #line1-part h6{
+    font-size: 3vw;
+    font-family: "silk serif";
+    font-weight: 100;
+}
+#line1-part h5{
+    /* background-color: red; */
+    /* To remove the elastic hinderence in the .line h1 we just gave width to h5 of the #line-part and aligned the text to the right */
+    width: 5vw;
+    text-align: right;
+}
+.line h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* animation: anime 4s infinite; */
+}
+@keyframes anime {
+    0%{
+        font-family: "plain light";
+        /* for inner underline */
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    47%{
+        font-family: "plain light";
+        /* for inner underline */
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: "silk serif";
+        /* for inner underline */
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silk serif";
+        /* for inner underline */
+        -webkit-text-stroke: 1px #fff;
+        color: transparent;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+/* Hame locomotive use karna hai so hum main div ko ht nhi denge */
+#main{
+    position: relative;
+    background-color: #030303;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    /* background-color: rgba(227, 19, 19, 0.444); */
+}
